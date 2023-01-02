@@ -44,15 +44,18 @@ public class SignUp_Negative {
 
 	}
 
-	/*
-	 * @Test public void EmailAlreadyExist() throws InterruptedException { //BR4
-	 * Thread.sleep(3000); sup.registerUser("Luke", "Glanton", "Luke123@fake.com",
-	 * "LukeHandsome123.", "LukeHandsome123."); Thread.sleep(3000);
-	 * assertEquals(false, sup.SameEmail()); assertEquals(false
-	 * ,sup.ConfirmRegister());
-	 * 
-	 * }
-	 */
+
+	@Test 
+	public void EmailAlreadyExist() throws InterruptedException { 
+		//BR4
+		Thread.sleep(3000); 
+		sup.registerUser("Luke", "Glanton", "LukeGLAN@fake.com", "LukeHandsome123.", "LukeHandsome123."); 
+		Thread.sleep(3000);
+		assertEquals(true, sup.SameEmail()); 
+		assertEquals(false,sup.ConfirmRegister());
+
+	}
+
 
 	@Test
 	public void invalidPasswoord() throws InterruptedException {
@@ -68,11 +71,22 @@ public class SignUp_Negative {
 	public void pass_need_3_typeofch() throws InterruptedException {
 		//BR6
 		Thread.sleep(3000);
-		sup.registerUser("Luke", "Glanton", "Luke123@fake.com", "Lukeglanton3", "Lukegl");
+		sup.registerUser("Luke", "Glanton", "Luke123@fake.com", "lukeglanton3", "lukeglanton3");
+		Thread.sleep(3000);
+		assertEquals(true, sup.pass_with_less3_types_ch());
+		assertEquals(false, sup.ConfirmRegister());
+	}
+
+	@Test
+	public void pass_need_to_be_same() throws InterruptedException {
+		//BR7
+		Thread.sleep(3000);
+		sup.registerUser("Luke", "Glanton", "Luke123@fake.com", "Lukeglanton3", "lukeglanton3");
 		Thread.sleep(3000);
 		assertEquals(true, sup.DiferentPassValues());
 		assertEquals(false, sup.ConfirmRegister());
 	}
+
 
 
 }

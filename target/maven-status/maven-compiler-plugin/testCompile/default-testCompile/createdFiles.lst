@@ -1,0 +1,5 @@
+test/AllTests.class
+com/project/pom/SignUpPage.class
+test/SignUp_HappyPath.class
+test/SignUp_Negative.class
+com/project/pom/Base.class
