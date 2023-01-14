@@ -26,7 +26,8 @@ public class SignUp_HappyPath {
 
 	@Test
 	public void test() throws InterruptedException {
-		sup.registerUser("Luke", "Glanton", "LukeGLAN@fake.com", "LukeHandsome123.", "LukeHandsome123.");
+		sup.registerUser("Luke", "Glanton", "LukeGLANT@fake.com", "LukeHandsome123.", "LukeHandsome123.");
+		Thread.sleep(2000);
 		assertEquals(true, sup.ConfirmRegister()); 
 	}
 

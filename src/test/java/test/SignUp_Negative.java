@@ -49,7 +49,7 @@ public class SignUp_Negative {
 	public void EmailAlreadyExist() throws InterruptedException { 
 		//BR4
 		Thread.sleep(3000); 
-		sup.registerUser("Luke", "Glanton", "LukeGLAN@fake.com", "LukeHandsome123.", "LukeHandsome123."); 
+		sup.registerUser("Luke", "Glanton", "LukeGLANT@fake.com", "LukeHandsome123.", "LukeHandsome123."); 
 		Thread.sleep(3000);
 		assertEquals(true, sup.SameEmail()); 
 		assertEquals(false,sup.ConfirmRegister());
